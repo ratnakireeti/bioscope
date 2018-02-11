@@ -38,9 +38,9 @@ public class DataSourceConfig extends AbstractMongoConfiguration {
 	@Override
 	@Bean
 	public Mongo mongo() throws Exception {
-		ServerAddress serverAddress = new ServerAddress(env.getRequiredProperty("mongo.host"));
-		List<MongoCredential> credentials = new ArrayList<>();
-		return new MongoClient(serverAddress, credentials);
+		ServerAddress serverAddress = new ServerAddress(env.getRequiredProperty("mongo.host"), 31588);
+		MongoCredential credential = MongoCredential.createMongoCRCredential("admin", "heroku_6f3xn8cd", "password".toCharArray());
+		return new MongoClient(serverAddress, Arrays.asList(credential));
 	}
 
 }
