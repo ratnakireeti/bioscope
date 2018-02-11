@@ -15,6 +15,7 @@ import org.springframework.data.mongodb.config.AbstractMongoConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
