@@ -37,7 +37,8 @@ public class AdminUserInitializer implements CommandLineRunner {
 		String password = UUID.randomUUID().toString();
         User user = new User();
 		user.setUsername("admin");
-		user.setPassword(encoder.encode(password));
+		//user.setPassword(encoder.encode(password));
+		user.setPassword("password");
 		user.setRegistrationDate(new Date());
 		user.setRoles(new HashSet<>(Arrays.asList(User.ROLE_USER, User.ROLE_ADMIN)));
 		userRepository.insert(user);

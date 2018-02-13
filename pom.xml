@@ -11,8 +11,9 @@
 
 	<properties>
 		<spring.platform.version>Athens-RELEASE</spring.platform.version>
+		<mongodb.version>3.2.2</mongodb.version>
 	</properties>
-
+	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

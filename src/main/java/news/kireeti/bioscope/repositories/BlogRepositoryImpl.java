@@ -23,7 +23,7 @@ public class BlogRepositoryImpl implements BlogOperations {
 	@Autowired private MongoTemplate mongoTemplate;
 
 	private DBCollection getCollection(){
-		return mongoTemplate.getCollection(mongoTemplate.getCollectionName(BlogPost.class));
+		return (DBCollection) mongoTemplate.getCollection(mongoTemplate.getCollectionName(BlogPost.class));
 	}
 
 	@Override

@@ -1,6 +1,7 @@
 package news.kireeti.bioscope.config;
 
 import com.mongodb.Mongo;
+import com.mongodb.MongoClient;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -29,7 +30,7 @@ public class EmbeddedDataSourceConfig {
 
     @Bean
     public MongoTemplate mongoTemplate(Mongo mongo){
-        return new MongoTemplate(mongo, "blog");
+        return new MongoTemplate((MongoClient) mongo, "blog");
     }
 
 }

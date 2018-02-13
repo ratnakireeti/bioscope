@@ -35,7 +35,7 @@ public class TestDataSourceConfig {
 
 	@Bean
 	public MongoTemplate mongoTemplate(Mongo mongo){
-		return new MongoTemplate(mongo, "blog-test");
+		return new MongoTemplate((MongoClient) mongo, "blog-test");
 	}
 	
 }
