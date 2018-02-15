@@ -15,7 +15,8 @@ import news.kireeti.bioscope.models.User;
  */
 public class UserRepositoryImpl implements UserDetailsService {
 
-    @Autowired private MongoTemplate mongoTemplate;
+    @Autowired 
+    private MongoTemplate mongoTemplate;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
